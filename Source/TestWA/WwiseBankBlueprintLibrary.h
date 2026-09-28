@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "AudioBankProfile.h"
 #include "WwiseBankBlueprintLibrary.generated.h"
 
 UCLASS()
@@ -10,6 +11,11 @@ class TESTWA_API UWwiseBankBlueprintLibrary : public UBlueprintFunctionLibrary
     GENERATED_BODY()
 
 public:
+    UFUNCTION(BlueprintCallable, Category = "Wwise|Audio Profiles")
+    static bool LoadAudioBankProfile(const UAudioBankProfile* Profile);
+
+    UFUNCTION(BlueprintCallable, Category = "Wwise|Audio Profiles")
+    static bool UnloadAudioBankProfile(const UAudioBankProfile* Profile);
 
     /** Gameplay-facing audio flow. Bank names are owned centrally in C++. */
     UFUNCTION(BlueprintCallable, Category = "Wwise|Audio Flow", meta = (DisplayName = "Enter Menu Audio"))

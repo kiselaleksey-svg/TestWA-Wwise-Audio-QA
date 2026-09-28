@@ -1,4 +1,5 @@
 #include "WwiseBankBlueprintLibrary.h"
+#include "AudioBankProfile.h"
 #include "AkAudioDevice.h"
 #include "Wwise/WwiseResourceCooker.h"
 #include "Wwise/WwiseResourceLoader.h"
@@ -17,7 +18,53 @@ namespace
         return !LoadedBanks.Contains(BankName) || UWwiseBankBlueprintLibrary::UnloadWwiseBankByName(BankName);
     }
 }
+bool UWwiseBankBlueprintLibrary::LoadAudioBankProfile(const UAudioBankProfile* Profile)
+{
+    if (!Profile)
+    {
+        UE_LOG(LogTemp, Error, TEXT("[WwiseBankBridge] Audio Bank Profile is null."));
+        return false;
+    }
 
+    if (Profile->SoundBankNames.IsEmpty())
+    {
+        UE_LOG(LogTemp, Warning, TEXT("[WwiseBankBridge] Audio Bank Profile '%s' has no banks."), *Profile->GetName());
+        return false;
+    }
+
+    bool bAllBanksLoaded = true;
+
+    for (const FName& BankName : Profile->SoundBankNames)
+    {
+        if (!LoadWwiseBankByName(BankName.ToString()))
+        {
+            bAllBanksLoaded = false;
+        }
+    }
+
+    return bAllBanksLoaded;
+}
+
+bool UWwiseBankBlueprintLibrary::UnloadAudioBankProfile(const UAudioBankProfile* Profile)
+{
+    if (!Profile)
+    {
+        UE_LOG(LogTemp, Error, TEXT("[WwiseBankBridge] Audio Bank Profile is null."));
+        return false;
+    }
+
+    bool bAllBanksUnloaded = true;
+
+    for (const FName& BankName : Profile->SoundBankNames)
+    {
+        if (!UnloadWwiseBankByName(BankName.ToString()))
+        {
+            bAllBanksUnloaded = false;
+        }
+    }
+
+    return bAllBanksUnloaded;
+}
 bool UWwiseBankBlueprintLibrary::EnterMenuAudio()
 {
     // Level-specific data must not stay resident after returning to the menu.
