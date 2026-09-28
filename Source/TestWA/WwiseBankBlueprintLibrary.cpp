@@ -10,13 +10,7 @@ namespace
 {
     TMap<FString, FWwiseLoadedSoundBankPtr> LoadedBanks;
 
-    const FString MenuBankName(TEXT("MenuBank"));
-    const FString LevelBankName(TEXT("LevelBank"));
-
-    bool UnloadIfLoaded(const FString& BankName)
-    {
-        return !LoadedBanks.Contains(BankName) || UWwiseBankBlueprintLibrary::UnloadWwiseBankByName(BankName);
-    }
+   
 }
 bool UWwiseBankBlueprintLibrary::LoadAudioBankProfile(const UAudioBankProfile* Profile)
 {
@@ -65,27 +59,9 @@ bool UWwiseBankBlueprintLibrary::UnloadAudioBankProfile(const UAudioBankProfile*
 
     return bAllBanksUnloaded;
 }
-bool UWwiseBankBlueprintLibrary::EnterMenuAudio()
-{
-    // Level-specific data must not stay resident after returning to the menu.
-    return UnloadIfLoaded(LevelBankName) && LoadWwiseBankByName(MenuBankName);
-}
 
-bool UWwiseBankBlueprintLibrary::EnterLevelAudio()
-{
-    // Keep MenuBank loaded: pause/settings UI can remain available during gameplay.
-    return LoadWwiseBankByName(LevelBankName);
-}
 
-bool UWwiseBankBlueprintLibrary::LeaveLevelAudio()
-{
-    return UnloadIfLoaded(LevelBankName);
-}
 
-bool UWwiseBankBlueprintLibrary::LeaveMenuAudio()
-{
-    return UnloadIfLoaded(MenuBankName);
-}
 
 bool UWwiseBankBlueprintLibrary::LoadWwiseBankByName(const FString& BankName)
 {
