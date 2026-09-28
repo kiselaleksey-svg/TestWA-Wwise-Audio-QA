@@ -1,0 +1,4 @@
+# Keep text files portable while preserving Unreal binary assets exactly.
+* text=auto
+*.uasset binary
+*.umap binary

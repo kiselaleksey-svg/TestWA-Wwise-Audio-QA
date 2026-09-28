@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{861FE63D-D38D-4551-8116-E14DF3F65736}" SchemaVersion="133">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{861FE63D-D38D-4551-8116-E14DF3F65736}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{21CE0E1C-E930-4369-B37D-044F6F9879D0}" WorkUnitID="{5E7A852C-B563-46BF-921F-1595B79B8968}"/>
+						</Reference>
+					</ReferenceList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="GameState" ID="{E10828CD-E7C8-44E4-8517-DA023033E905}"/>
+								<StateGroupInfo Name="" ID="{04374A5E-3C29-4B49-A741-F4561CFFA0B0}" ShortID="355930831"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="GamePlay" ID="{A2C51CA2-42DF-4229-BB7C-D2B3639FC8C6}"/>
+								<CustomState Name="" ID="{88C2B59B-5A18-4A2E-A6DA-50213D271FE8}" ShortID="550873644"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="None" ID="{A58F44C1-B171-499F-A15E-02745398BB2E}"/>
+								<CustomState Name="" ID="{07628BE7-EC89-4A38-8863-2846D58536C2}" ShortID="607606653"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Pause" ID="{83B4AAC2-F44D-4FF2-AD5B-4D0DA2A2197A}"/>
+								<CustomState Name="" ID="{2E99A703-2D22-4770-84EA-4F3A469DC631}" ShortID="852851553">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64" Value="-20"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+				</Bus>
+				<Bus Name="PriorityTestBus" ID="{860A6F60-0B76-4C12-A53F-F057F878AF91}">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>32</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{21CE0E1C-E930-4369-B37D-044F6F9879D0}" WorkUnitID="{5E7A852C-B563-46BF-921F-1595B79B8968}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

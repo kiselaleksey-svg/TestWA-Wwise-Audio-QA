@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A06AAC59-D8A4-4230-9BBF-8E1A561410BC}" SchemaVersion="133">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{A06AAC59-D8A4-4230-9BBF-8E1A561410BC}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="GP_FootstepSpeed" ID="{594CAABB-E6D5-48BF-908B-B186318E6135}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

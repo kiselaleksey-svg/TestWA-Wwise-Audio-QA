@@ -1,0 +1,28 @@
+# Unreal Engine generated files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+
+# Wwise generated and local cache data
+TestWA_WwiseProject/.cache/
+TestWA_WwiseProject/GeneratedSoundBanks/
+
+# Wwise/Unreal plugin build products
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+
+# The Wwise integration is installed locally. It is restored separately from
+# the matching Wwise SDK / Unreal integration package, rather than copied into
+# the repository.
+Plugins/
+
+# Raw source-audio assets are large binary files. Keep project authoring data
+# in Git; add these assets through Git LFS only when their version history is
+# needed.
+TestWA_WwiseProject/Originals/

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8848C198-72D9-4C17-94FB-0957465928D2}" SchemaVersion="133">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{8848C198-72D9-4C17-94FB-0957465928D2}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="LevelBank" ID="{123B6A8D-BDD0-4FE3-BAA9-37F6DE1ABF4B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_CPU_NOStress30_02" ID="{71796F6C-C618-4282-B9E3-31CCB5311281}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PriorityTest_Both" ID="{3B800EA0-0992-44CB-98C9-417222A7718E}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Test_SpatialSound" ID="{2DFFC132-A1D0-4572-A320-02ED2C22E8E5}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CPU_NOStress30_01" ID="{1C6DAA86-EF4E-45EA-AE45-4786B7BD63ED}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CPU_NOStress30" ID="{111B0A07-3C21-464C-B2C8-6195F4F7578C}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CPU_Stress_Test" ID="{FA1F81FE-4A21-47A3-AF2B-F74BBAE8F9A9}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CPU_NOStress" ID="{8A786428-3D0F-48E0-BE5B-7FC24469760D}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="StreamingStress" ID="{2C8EFAB4-AEB1-49EC-BF37-3DE914F67D52}" WorkUnitID="{533FA4A9-7CBF-487C-A2A7-735FD72C1CD8}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_RC_Footsteps_Concrete_Walk" ID="{3A484197-3D5E-4CE9-AB60-8E6BD10214BE}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SWC_Footsteps_Walk" ID="{7AFBA98E-25A6-4EC9-8C76-01842D89779E}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="MenuBank" ID="{DA8F3C09-ECBF-4F02-802F-E9E2B59D6374}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_UI_Menu_Open_Test" ID="{CD2CF3FB-7E48-494D-ADA7-1E6AAE1DEF2B}" WorkUnitID="{BD0F4D49-4261-4717-9940-6FF74290DF27}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
